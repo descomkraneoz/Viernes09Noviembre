@@ -1,9 +1,9 @@
 public class Divisores {
     public static void main(String[] args) {
 
-        int numeroLeido=1000;
-        int divisor=2;
-        boolean terminarPrograma=false;
+        int numeroLeido = 1000;
+        int divisor = 2;
+        boolean terminarPrograma = false;
 
        /* Una forma de hacerlo aunque no me gusta mucho
 
@@ -28,14 +28,15 @@ public class Divisores {
 
         */
 
-        //Otra forma, con bucle for
+        //Otra forma, con bucle for y salida por substring que quita la coma del final
 
+        String salida="";
         System.out.print("Los divisores son: ");
-        for (int i = 2; i <=numeroLeido-1 ; i++) {
-            if (numeroLeido%i==0){
-                System.out.print(i+",");
+        for (int i = 2; i < numeroLeido ; i++) {
+            if (numeroLeido % i == 0) {
+                salida+=i + ", ";
             }
         }
-        System.out.print(numeroLeido); //añade el ultimo valor permitido
+        System.out.println(salida.substring(0,salida.length()-2));
     }
 }
